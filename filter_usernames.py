@@ -1,5 +1,6 @@
 from go_to_url import go_to_url
 from followers_count import followers_count
+from time_sleep import time_sleep
 
 
 def filter_usernames(driver, usernames, max_followers=10_000):
@@ -9,6 +10,7 @@ def filter_usernames(driver, usernames, max_followers=10_000):
         driver.execute_script("window.open('');")
         driver.switch_to.window(driver.window_handles[i + 1])
         go_to_url(driver, url)
+        print(username)
         num_followers = followers_count(driver)
 
         if num_followers >= max_followers:

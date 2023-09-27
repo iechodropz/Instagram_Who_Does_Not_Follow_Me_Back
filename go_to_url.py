@@ -1,6 +1,6 @@
-import time
+from time_sleep import time_sleep
 
 
 def go_to_url(driver, url):
     driver.get(url)
-    time.sleep(5)
+    time_sleep()

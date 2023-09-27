@@ -1,4 +1,4 @@
-import time
+from time_sleep import time_sleep
 
 
 def scroll(driver, element):
@@ -11,7 +11,7 @@ def scroll(driver, element):
             element,
         )
 
-        time.sleep(3)
+        time_sleep()
 
         new_height = driver.execute_script("return arguments[0].scrollHeight;", element)
 

@@ -1,5 +1,5 @@
 from selenium import webdriver
-import time
+from time_sleep import time_sleep
 
 
 def start_web_driver():
@@ -7,5 +7,5 @@ def start_web_driver():
     options.add_experimental_option("detach", True)
 
     driver = webdriver.Chrome(options=options)
-    time.sleep(5)
+    time_sleep()
     return driver
